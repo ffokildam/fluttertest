@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.green,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: () {
             setState(() {
               count++;
@@ -34,14 +34,14 @@ class _MyAppState extends State<MyApp> {
           },
         ),
         body: Center(
-          child: Text('$count',style: TextStyle(fontSize: 100)),
+          child: Text('$count',style: const TextStyle(fontSize: 100)),
         ),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed, // Fixed
-          backgroundColor: Colors.black, // <-- This works for fixed
-          selectedItemColor: Colors.greenAccent,
+          backgroundColor: Colors.white, // <-- This works for fixed
+          selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.call),
               label: 'Call',
